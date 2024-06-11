@@ -4,37 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- Primary Meta Tags -->
-  <title>เมื่อไหร่ประยุทธ์จะออกไป?</title>
-  <meta name="title" content="เมื่อไหร่ประยุทธ์จะออกไป?" />
-  <meta name="description" content="นับเวลาถอยหลังถึงวันที่พลเอกประยุทธ์ จันทร์โอชา จะหมดวาระการเป็นนายกรัฐมนตรี" />
+  <title>เมื่อไหร่ 3C KMUTT จะสิ้นสุด</title>
+  <meta name="title" content="เมื่อไหร่ 3C KKMUTT จะสิ้นสุด?" />
+  <meta name="description" content="นับเวลาถอยหลังถึงวันส่งมอบ 3C KMUTT" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://howlonguntilprayuthleaves.com" />
-  <meta property="og:title" content="เมื่อไหร่ประยุทธ์จะออกไป?" />
-  <meta property="og:description"
-    content="นับเวลาถอยหลังถึงวันที่พลเอกประยุทธ์ จันทร์โอชา จะหมดวาระการเป็นนายกรัฐมนตรี" />
-  <meta property="og:image" content="/prayuth.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://howlonguntilprayuthleaves.com" />
-  <meta property="twitter:title" content="เมื่อไหร่ประยุทธ์จะออกไป?" />
-  <meta property="twitter:description"
-    content="นับเวลาถอยหลังถึงวันที่พลเอกประยุทธ์ จันทร์โอชา จะหมดวาระการเป็นนายกรัฐมนตรี" />
-  <meta property="twitter:image" content="/prayuth.jpg" />
-
-  <link href="https://fonts.googleapis.com/css?family=Chonburi&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet" />
 
   <style>
     body {
       margin: 0;
-      font-family: 'Chonburi', 'Sukhumvit', -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-        'Helvetica Neue', 'Tahoma', sans-serif;
+      font-family: 'Prompt', 'Sukhumvit', -apple-system, BlinkMacSystemFont, 'Tahoma', sans-serif;
     }
 
     * {
@@ -62,14 +43,14 @@
 
     .countdown {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(7, 1fr);
 
-      grid-gap: 25px;
+      grid-gap: 20px;
 
       align-items: center;
       justify-content: center;
 
-      margin: 30px 0;
+      margin: 16px 0;
     }
 
     .slot {
@@ -87,20 +68,20 @@
     }
 
     .slot.slot__highlight {
-      background: #3b5171;
+      background: linear-gradient(to right, #FAB32E 0%, #F96234 49%, #E22E73 78%, #5449FF 100%);
       padding: 1em 1.8em;
       color: white;
       box-shadow: 0px 3px 8px rgba(59, 81, 113, 0.3);
     }
 
     .slot :first-child {
-      font-size: 4.5em;
+      font-size: 3em;
       font-weight: bold;
     }
 
     .slot .label {
-      font-size: 1.5em;
-      margin-top: 15px;
+      font-size: 1em;
+      margin-top: 16px;
 
       color: #333;
     }
@@ -114,7 +95,7 @@
     }
     @media (max-width: 830px) {
       .countdown {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .slot :first-child {
@@ -154,16 +135,16 @@
 <body>
   <div class="container">
     <h1 class="heading">
-      <a href="https://howlonguntilprayuthleaves.com/">เมื่อไหร่ประยุทธ์จะออกไป?</a>
+      เหลือเวลาทำ 3C KMUTT อีก
     </h1>
 
     <div class="countdown">
-      <div class="slot slot__highlight">
+      <div class="slot">
         <div class="years">0</div>
         <div class="label">ปี</div>
       </div>
 
-      <div class="slot">
+      <div class="slot slot__highlight">
         <div class="months">0</div>
         <div class="label">เดือน</div>
       </div>
@@ -187,9 +168,14 @@
         <div class="seconds">0</div>
         <div class="label">วินาที</div>
       </div>
+
+      <div class="slot">
+        <div class="milliseconds">0</div>
+        <div class="label">มิลลิวินาที</div>
+      </div>
     </div>
 
-    <h1 class="heading">ประยุทธ์เป็นนายกมาแล้ว</h1>
+    <h1 class="heading">Project นี้เริ่มมาแล้ว</h1>
 
     <div class="countup">
       <div class="slot slot__highlight">
@@ -206,20 +192,20 @@
     const hoursEl = document.querySelector('.hours')
     const minutesEl = document.querySelector('.minutes')
     const secondsEl = document.querySelector('.seconds')
+    const millisecondsEl = document.querySelector('.milliseconds')
 
     const upDaysEl = document.querySelector('.up-days')
 
     // First day of the NCPO coup: 22 พฤษภาคม 2557 เวลา 16:30 น.
-    const coupDate = new Date('05/22/2014 16:30:00 UTC+0700')
-    const leaveDate = new Date('2023-05-06')
+    const startDate = new Date('01/04/2024 17:00:00 UTC+0700')
+    const endDate = new Date('2024-07-31')
 
     let timer
 
     function countdown() {
       const currentDate = Date.now()
-
       // difference of dates
-      const difference = leaveDate - currentDate
+      const difference = endDate - currentDate
 
       // if difference is negative than it's pass the target date
       if (difference < 0) {
@@ -228,6 +214,7 @@
         return
       }
 
+      const _millisec = 1
       const _second = 1000
       const _minute = _second * 60
       const _hour = _minute * 60
@@ -242,12 +229,14 @@
       let hours = Math.floor((difference % _day) / _hour)
       let minutes = Math.floor((difference % _hour) / _minute)
       let seconds = Math.floor((difference % _minute) / _second)
+      let milliseconds = Math.floor((difference % _second) / _millisec)
 
       // fix dates so that it will show two digets
       days = String(days).length >= 2 ? days : '0' + days
       hours = String(hours).length >= 2 ? hours : '0' + hours
       minutes = String(minutes).length >= 2 ? minutes : '0' + minutes
       seconds = String(seconds).length >= 2 ? seconds : '0' + seconds
+      milliseconds = milliseconds
 
       yearsEl.innerHTML = years
       monthsEl.innerHTML = months
@@ -255,15 +244,16 @@
       hoursEl.innerHTML = hours
       minutesEl.innerHTML = minutes
       secondsEl.innerHTML = seconds
+      millisecondsEl.innerHTML = milliseconds
 
-      const beenPrimeMinisterForDays = Math.ceil(
-        (currentDate - coupDate) / 1000 / 60 / 60 / 24
+      const workProjectForDays = Math.ceil(
+        (currentDate - startDate) / 1000 / 60 / 60 / 24
       )
 
-      upDaysEl.innerHTML = beenPrimeMinisterForDays
+      upDaysEl.innerHTML = workProjectForDays
     }
 
-    timer = setInterval(countdown, 1000)
+    timer = setInterval(countdown, 50)
   </script>
 </body>
 
